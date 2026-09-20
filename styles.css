@@ -264,48 +264,117 @@ body {
   background-color: rgb(10, 9, 13);
   text-align: center;
   padding: 2.5rem;
-  font-size: 1.9rem;
+  font-size: 1.1rem; /* Ajustado para desktop */
   color: #999;
   border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Responsividade - Dispositivos Móveis e Tablets continuam protegidos */
-@media (max-width: 968px) {
-  html {
-    font-size: 10px; /* Retorna ao tamanho padrão em telas menores */
-  }
-
+/* ==========================================
+   RESPONSIVIDADE PARA TABLETS (Até 1024px)
+   ========================================== */
+@media (max-width: 1024px) {
   .minha_apresentacao {
     flex-direction: column-reverse;
-    padding: 2rem 5%;
-    gap: 1rem;
-  }
-
-  .texto_apresentacao {
-    font-size: 1.1rem;
-  }
-
-  .menu__cabecalho {
-    flex-direction: column;
-    gap: 0.1rem;
-    padding: 0.1rem;
-  }
-
-  .menu__itens_navegacao {
-    gap: 1.1rem;
+    padding: 4rem 5%;
+    gap: 2.5rem;
   }
 }
 
-@media (max-width: 576px) {
-  .pix-copia-container {
-    flex-direction: column;
+/* ==========================================
+   RESPONSIVIDADE PARA CELULARES (Ex: Samsung M14 e similares - Até 768px)
+   ========================================== */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px; /* Escala ideal para leitura mobile sem exageros */
+  }
+
+  /* Cabeçalho compacto e organizado */
+  .menu__cabecalho {
+    flex-direction: row;
+    padding: 0.8rem 1rem;
+    justify-content: space-between;
+  }
+
+  .logoBeviltech {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .logo-titulo {
+    font-size: 1rem;
+  }
+
+  .menu__itens_navegacao {
+    gap: 1rem;
+  }
+
+  .menu__itens_navegacao a {
+    font-size: 1rem;
+  }
+
+  /* Seção de Apresentação principal no celular */
+  .minha_apresentacao {
+    flex-direction: column-reverse;
+    padding: 2rem 1.2rem;
+    gap: 2rem;
+    text-align: center;
   }
 
   .texto_apresentacao {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
+    text-align: left;
   }
-  
-  .secoes {
-    padding: 0;
+
+  .texto_descricao {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  /* Imagem do foguete PET adaptada para a tela do celular */
+  .imagemLogoRocket {
+    max-width: 280px;
+    padding: 10px;
+    border-radius: 1.2rem;
+  }
+
+  /* Ajustes dos blocos internos */
+  .meta-info {
+    font-size: 1rem;
+  }
+
+  .texto_apoio {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .pix-copia-container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .pix-copia-container input {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+
+  .btn-pix {
+    width: 100%;
+    padding: 0.8rem;
+  }
+
+  /* Hobbies / GIF */
+  .fogueteVoando {
+    max-width: 280px;
+  }
+
+  .hobbies-titulo {
+    font-size: 1.5rem;
+  }
+
+  /* Rodapé mobile */
+  .rodape {
+    font-size: 0.85rem;
+    padding: 1.5rem 1rem;
   }
 }
